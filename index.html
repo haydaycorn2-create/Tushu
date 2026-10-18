@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ জন্মদিন, আমার পৃথিবী! 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+            font-family: 'Hind Siliguri', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+            max-width: 600px;
+            width: 90%;
+            z-index: 10;
+            position: relative;
+            margin: 40px 0 20px 0;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            color: #ff4d85;
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .bangla-caption {
+            color: #444;
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .bangla-subtext {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        /* Polaroid Photo Style */
+        .polaroid {
+            background: white;
+            padding: 15px 15px 25px 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            width: 250px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        /* Alternate tilts for a messy desk look */
+        .polaroid:nth-child(odd) { transform: rotate(-3deg); }
+        .polaroid:nth-child(even) { transform: rotate(3deg); }
+        .polaroid:nth-child(3) { transform: rotate(-1deg); }
+
+        .polaroid:hover {
+            transform: scale(1.1) rotate(0deg);
+            box-shadow: 0 10px 25px rgba(255, 77, 133, 0.4);
+            z-index: 20;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .photo-caption {
+            font-family: 'Hind Siliguri', sans-serif;
+            color: #ff4d85;
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        #secret-message {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #fff0f5;
+            border-radius: 15px;
+            border: 2px dashed #ffb3c6;
+            color: #d81159;
+            font-weight: bold;
+            font-size: 1.3em;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        button {
+            background-color: #ff4d85;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Fredoka One', cursive;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 77, 133, 0.4);
+            z-index: 10;
+            margin-bottom: 50px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background-color: #ff3370;
+            box-shadow: 0 6px 20px rgba(255, 77, 133, 0.6);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: absolute;
+            font-size: 1.5em;
+            color: #ff4d85;
+            opacity: 0;
+            animation: floatUp 4s infinite linear;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+        
+        audio { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="hearts-container"></div>
+
+    <div class="header-container">
+        <h1>শুভ জন্মদিন! 🎂</h1>
+        
+        <div class="bangla-caption">
+            আমার পুরো পৃথিবীটা তুমি।
+        </div>
+        <div class="bangla-subtext">
+            তোমার হাসিতেই আমার দিন শুরু হয়, আর তোমার মাঝেই আমার সব সুখ। 
+            তুমি শুধু আমার ভালোবাসাই নও, তুমি আমার বেঁচে থাকার কারণ। 
+            তোমার এই বিশেষ দিনে প্রার্থনা করি, তোমার সব স্বপ্ন সত্যি হোক।
+        </div>
+
+        <div id="secret-message">
+            আমি তোমাকে কতটা ভালোবাসি তা হয়তো কোনোদিন বলে শেষ করতে পারব না। <br>
+            Happy Birthday to my Tushu! 🥂❤️
+        </div>
+    </div>
+
+    <!-- PHOTO GALLERY -->
+    <div class="gallery">
+        <!-- Photo 1 -->
+        <div class="polaroid">
+            <img src="IMG-20260906-WA0000.jpg" alt="Winking cute pose">
+            <div class="photo-caption">তোমার দুষ্টু মিষ্টি হাসি ❤️</div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="polaroid">
+            <img src="IMG-20260906-WA0010.jpg" alt="Sweet smile">
+            <div class="photo-caption">আমার শান্তি ✨</div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="polaroid">
+            <img src="IMG-20261002-WA0010.jpg" alt="With red flower">
+            <div class="photo-caption">সবচেয়ে সুন্দর 🌸</div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="polaroid">
+            <img src="IMG-20261017-WA0018.jpg" alt="Moonlight">
+            <div class="photo-caption">চাঁদের চেয়েও স্নিগ্ধ 🌙</div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="polaroid">
+            <img src="IMG-20261017-WA0061.jpg" alt="Dinner date">
+            <div class="photo-caption">আমার প্রিয় মুহূর্ত 🥺</div>
+        </div>
+    </div>
+    
+    <!-- MUSIC PLAYER -->
+    <audio id="bgMusic" loop>
+        <source src="romantic-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="surprise-btn" onclick="revealSurprise()">Tap for a Magic Surprise ✨</button>
+
+    <script>
+        function revealSurprise() {
+            document.getElementById('secret-message').style.display = 'block';
+            document.getElementById('surprise-btn').style.display = 'none';
+            
+            let music = document.getElementById('bgMusic');
+            music.play().catch(error => console.log("Music auto-play blocked."));
+            
+            // Speed up hearts when clicked
+            setInterval(createHeart, 150);
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.getElementById('hearts-container').appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
